@@ -8,8 +8,11 @@ public class Runner {
 	final static int player2Symbol = 2;
 
 	public static void main(String[] args) {
+		// Create object b which is OthelloBoard implemented
+		// in OthellBoard class
 		OthelloBoard b = new OthelloBoard();
 		int n = s.nextInt();
+		// Marking Boolean for player turns
 		boolean p1Turn = true;
 		while(n > 0) {
 			int x = s.nextInt();
