@@ -23,16 +23,16 @@ public class OthelloBoard {
 
 	public boolean move(int symbol, int x, int y){
       
-  	   boolean check=false;
-       int cnt=0 , opp=1;
+  	boolean check=false;
+        int cnt=0 , opp=1;
       
-      if(symbol==1)
-      	opp=2;
-      else
-        opp=1;
-      
-     int xdir[]= {-1,-1,0,1,1,1,0,-1};
-     int ydir[]= {0,1,1,1,0,-1,-1,-1};
+        if(symbol==1)
+      		opp=2;
+      	else
+        	opp=1;
+
+	int xdir[]= {-1,-1,0,1,1,1,0,-1};
+	int ydir[]= {0,1,1,1,0,-1,-1,-1};
      
       
       	if( x>=8 || y>=8 ||x<0 ||y<0 || board[x][y]==opp || board[x][y]==symbol )
@@ -53,23 +53,19 @@ public class OthelloBoard {
               	else if( board[x + i*xdir[z]][y+i*ydir[z]]==symbol && cnt!=0)
                 {
                   	int j=0;
-                	while(  j<=i)//board[x + j*xdir[z]][y+j*ydir[z]]!=symbol)
+                     while(  j<=i)//board[x + j*xdir[z]][y+j*ydir[z]]!=symbol)
                     {
                        board[x + j*xdir[z]][y+j*ydir[z]]=symbol;
                       j++;
                     }
-                  check=true;
-                  break;
+                  	check=true;
+                  	break;
                 }
               	else 
-                  break;
-                  
+                  break;                  
 			}
-        // System.out.println(cnt);
-		}
-      
-      return check;
-      
+		}      
+      return check;     
       
 	}
 }
